@@ -1,11 +1,11 @@
 # README
 
-## GROUP <add-group-name>
+## GROUP Tour Booking System
 
-- Member 1: <add-name>
-- Member 2: <add-name>
-- Member 3: <add-name>
-- Member 4: <add-name>
+- Member 1: Hoang Huong Chi
+- Member 2: Thai Ha Trang
+- Member 3: Nguyen Thi Ha Anh
+- Member 4: Nguyen Huyen Thuong
 
 ## Starting server
 

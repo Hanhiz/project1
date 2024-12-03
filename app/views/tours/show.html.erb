@@ -1,0 +1,33 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Tour</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to tours_path, class: button_class(theme: "transparent") do %>
+      All Tours
+      <% end %>
+      <%= link_to edit_tour_path(@tour), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Name:</p>
+        <p><%= @tour.name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Destination:</p>
+        <p><%= @tour.destination %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Start date:</p>
+        <p><%= @tour.start_date %></p>
+      </li>
+      <li>
+        <p class="font-semibold">End date:</p>
+        <p><%= @tour.end_date %></p>
+      </li>
+  </ul>
+</div>

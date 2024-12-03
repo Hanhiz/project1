@@ -1,0 +1,38 @@
+<%= form_with(model: tour_package) do |form| %>
+<% if tour_package.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(tour_package.errors.count, "error") %> prohibited this tour_package from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% tour_package.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="mb-6">
+        <%= form.label :name, class: label_class %>
+          <%= form.text_field :name, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :description, class: label_class %>
+          <%= form.text_area :description, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :price, class: label_class %>
+          <%= form.text_field :price, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :tour_id, class: label_class %>
+          <%= form.text_field :tour_id, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if tour_package.persisted? %>
+<%= link_to "Cancel", tour_package, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", tour_packages_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

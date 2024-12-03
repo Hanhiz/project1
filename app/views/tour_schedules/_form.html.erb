@@ -1,0 +1,38 @@
+<%= form_with(model: tour_schedule) do |form| %>
+<% if tour_schedule.errors.any? %>
+<div id="error_explanation" class="bg-red-50 p-6 rounded text-red-800">
+  <h2 class="text-lg font-semibold mb-3"><%= pluralize(tour_schedule.errors.count, "error") %> prohibited this tour_schedule from being saved:</h2>
+
+  <ul class="list-disc leading-relaxed">
+    <% tour_schedule.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+
+  <div class="mb-6">
+        <%= form.label :itinerary, class: label_class %>
+          <%= form.text_area :itinerary, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :day_number, class: label_class %>
+          <%= form.number_field :day_number, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :activity_description, class: label_class %>
+          <%= form.text_area :activity_description, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :tour_id, class: label_class %>
+          <%= form.text_field :tour_id, class: input_class %>
+      </div>
+
+<%= form.submit class: button_class(theme: 'primary') %>
+
+<% if tour_schedule.persisted? %>
+<%= link_to "Cancel", tour_schedule, class: "text-neutral-700 underline inline-block ml-3" %>
+<% else %>
+<%= link_to "Cancel", tour_schedules_path, class:  "text-neutral-700 underline inline-block ml-3" %>
+<% end %>
+<% end %>

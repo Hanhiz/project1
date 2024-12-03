@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_03_08_130018) do
+ActiveRecord::Schema[7.0].define(version: 2024_12_03_111450) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -52,6 +52,27 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_130018) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
+  create_table "bookings", force: :cascade do |t|
+    t.date "date"
+    t.integer "number_of_people"
+    t.decimal "total_amount", precision: 10, scale: 2
+    t.bigint "tour_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tour_id"], name: "index_bookings_on_tour_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
+  end
+
+  create_table "customer_preferences", force: :cascade do |t|
+    t.string "preferred_destination"
+    t.date "preferred_travel_date"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_customer_preferences_on_user_id"
+  end
+
   create_table "friendly_id_slugs", force: :cascade do |t|
     t.string "slug", null: false
     t.integer "sluggable_id", null: false
@@ -61,6 +82,67 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_130018) do
     t.index ["slug", "sluggable_type", "scope"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type_and_scope", unique: true
     t.index ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
     t.index ["sluggable_type", "sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_type_and_sluggable_id"
+  end
+
+  create_table "notifications", force: :cascade do |t|
+    t.text "message"
+    t.date "date"
+    t.boolean "read_status"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_notifications_on_user_id"
+  end
+
+  create_table "payments", force: :cascade do |t|
+    t.date "date"
+    t.decimal "amount", precision: 10, scale: 2
+    t.string "method"
+    t.bigint "booking_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["booking_id"], name: "index_payments_on_booking_id"
+  end
+
+  create_table "reviews", force: :cascade do |t|
+    t.text "review_text"
+    t.integer "rating"
+    t.date "review_date"
+    t.bigint "user_id", null: false
+    t.bigint "tour_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tour_id"], name: "index_reviews_on_tour_id"
+    t.index ["user_id"], name: "index_reviews_on_user_id"
+  end
+
+  create_table "tour_packages", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.decimal "price", precision: 10, scale: 2
+    t.bigint "tour_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tour_id"], name: "index_tour_packages_on_tour_id"
+  end
+
+  create_table "tour_schedules", force: :cascade do |t|
+    t.text "itinerary"
+    t.integer "day_number"
+    t.text "activity_description"
+    t.bigint "tour_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tour_id"], name: "index_tour_schedules_on_tour_id"
+  end
+
+  create_table "tours", force: :cascade do |t|
+    t.string "name"
+    t.string "destination"
+    t.date "start_date"
+    t.date "end_date"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -78,6 +160,38 @@ ActiveRecord::Schema[7.0].define(version: 2023_03_08_130018) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  create_table "vehicle_schedules", force: :cascade do |t|
+    t.datetime "departure_time"
+    t.datetime "arrival_time"
+    t.string "route"
+    t.bigint "vehicle_id", null: false
+    t.bigint "tour_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["tour_id"], name: "index_vehicle_schedules_on_tour_id"
+    t.index ["vehicle_id"], name: "index_vehicle_schedules_on_vehicle_id"
+  end
+
+  create_table "vehicles", force: :cascade do |t|
+    t.integer "type"
+    t.integer "capcity"
+    t.string "model"
+    t.string "registration_number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
+  add_foreign_key "bookings", "tours"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "customer_preferences", "users"
+  add_foreign_key "notifications", "users"
+  add_foreign_key "payments", "bookings"
+  add_foreign_key "reviews", "tours"
+  add_foreign_key "reviews", "users"
+  add_foreign_key "tour_packages", "tours"
+  add_foreign_key "tour_schedules", "tours"
+  add_foreign_key "vehicle_schedules", "tours"
+  add_foreign_key "vehicle_schedules", "vehicles"
 end

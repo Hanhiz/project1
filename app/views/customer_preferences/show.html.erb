@@ -1,0 +1,29 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Customer_preference</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to customer_preferences_path, class: button_class(theme: "transparent") do %>
+      All Customer_preferences
+      <% end %>
+      <%= link_to edit_customer_preference_path(@customer_preference), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Preferred destination:</p>
+        <p><%= @customer_preference.preferred_destination %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Preferred travel date:</p>
+        <p><%= @customer_preference.preferred_travel_date %></p>
+      </li>
+      <li>
+        <p class="font-semibold">User:</p>
+        <p><%= @customer_preference.user %></p>
+      </li>
+  </ul>
+</div>

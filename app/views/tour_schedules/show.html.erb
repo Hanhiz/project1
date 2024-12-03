@@ -1,0 +1,33 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Tour_schedule</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to tour_schedules_path, class: button_class(theme: "transparent") do %>
+      All Tour_schedules
+      <% end %>
+      <%= link_to edit_tour_schedule_path(@tour_schedule), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Itinerary:</p>
+        <p><%= @tour_schedule.itinerary %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Day number:</p>
+        <p><%= @tour_schedule.day_number %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Activity description:</p>
+        <p><%= @tour_schedule.activity_description %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Tour:</p>
+        <p><%= @tour_schedule.tour %></p>
+      </li>
+  </ul>
+</div>

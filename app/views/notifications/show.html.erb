@@ -1,0 +1,33 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Notification</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to notifications_path, class: button_class(theme: "transparent") do %>
+      All Notifications
+      <% end %>
+      <%= link_to edit_notification_path(@notification), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Message:</p>
+        <p><%= @notification.message %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Date:</p>
+        <p><%= @notification.date %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Read status:</p>
+        <p><%= @notification.read_status %></p>
+      </li>
+      <li>
+        <p class="font-semibold">User:</p>
+        <p><%= @notification.user %></p>
+      </li>
+  </ul>
+</div>

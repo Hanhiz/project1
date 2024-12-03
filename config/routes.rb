@@ -11,4 +11,16 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   root "home#index"
+
+  resources :tours
+  resources :bookings
+  resources :users
+  resources :tour_packages
+  resources :tour_schedules
+  resources :vehicles
+  resources :vehicle_schedules
+  resources :payments
+  resources :reviews
+  resources :customer_preferences
+  resources :notifications
 end

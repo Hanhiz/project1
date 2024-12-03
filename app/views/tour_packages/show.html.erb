@@ -1,0 +1,33 @@
+<div class="max-w-3xl mx-auto px-4">
+  <div class="flex items-center justify-between">
+    <h1 class="flex-1 font-bold text-3xl">Tour_package</h1>
+
+    <div class="flex-wrap lg:flex items-center lg:space-x-3">
+      <%= link_to tour_packages_path, class: button_class(theme: "transparent") do %>
+      All Tour_packages
+      <% end %>
+      <%= link_to edit_tour_package_path(@tour_package), class: button_class(theme:"primary") do %>
+      Edit
+      <% end %>
+    </div>
+  </div>
+
+  <ul class="text-slate-700">
+      <li>
+        <p class="font-semibold">Name:</p>
+        <p><%= @tour_package.name %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Description:</p>
+        <p><%= @tour_package.description %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Price:</p>
+        <p><%= @tour_package.price %></p>
+      </li>
+      <li>
+        <p class="font-semibold">Tour:</p>
+        <p><%= @tour_package.tour %></p>
+      </li>
+  </ul>
+</div>

@@ -3,11 +3,15 @@
 one:
   name: MyString
   destination: MyString
-  start_date: 2024-12-03
-  end_date: 2024-12-03
+  start_date: 2024-12-04
+  end_date: 2024-12-04
+  minimum_price: 9.99
+  max_capcity: 1
 
 two:
   name: MyString
   destination: MyString
-  start_date: 2024-12-03
-  end_date: 2024-12-03
+  start_date: 2024-12-04
+  end_date: 2024-12-04
+  minimum_price: 9.99
+  max_capcity: 1

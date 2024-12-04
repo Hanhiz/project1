@@ -16,6 +16,8 @@ class ToursTest < ApplicationSystemTestCase
 
     fill_in "Destination", with: @tour.destination
     fill_in "End date", with: @tour.end_date
+    fill_in "Max capcity", with: @tour.max_capcity
+    fill_in "Minimum price", with: @tour.minimum_price
     fill_in "Name", with: @tour.name
     fill_in "Start date", with: @tour.start_date
     click_on "Create Tour"
@@ -30,6 +32,8 @@ class ToursTest < ApplicationSystemTestCase
 
     fill_in "Destination", with: @tour.destination
     fill_in "End date", with: @tour.end_date
+    fill_in "Max capcity", with: @tour.max_capcity
+    fill_in "Minimum price", with: @tour.minimum_price
     fill_in "Name", with: @tour.name
     fill_in "Start date", with: @tour.start_date
     click_on "Update Tour"

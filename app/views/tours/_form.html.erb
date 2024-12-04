@@ -27,6 +27,14 @@
         <%= form.label :end_date, class: label_class %>
           <%= form.date_field :end_date, class: input_class %>
       </div>
+  <div class="mb-6">
+        <%= form.label :minimum_price, class: label_class %>
+          <%= form.text_field :minimum_price, class: input_class %>
+      </div>
+  <div class="mb-6">
+        <%= form.label :max_capcity, class: label_class %>
+          <%= form.number_field :max_capcity, class: input_class %>
+      </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>
 

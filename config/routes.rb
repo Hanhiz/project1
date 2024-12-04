@@ -14,7 +14,6 @@ Rails.application.routes.draw do
 
   resources :tours
   resources :bookings
-  resources :users
   resources :tour_packages
   resources :tour_schedules
   resources :vehicles

@@ -5,6 +5,8 @@ class CreateTours < ActiveRecord::Migration[7.0]
       t.string :destination
       t.date :start_date
       t.date :end_date
+      t.decimal :minimum_price, precision: 10, scale: 2
+      t.integer :max_capcity
 
       t.timestamps
     end

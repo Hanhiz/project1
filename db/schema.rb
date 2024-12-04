@@ -53,15 +53,13 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_04_072242) do
   end
 
   create_table "bookings", force: :cascade do |t|
-    t.date "date"
-    t.integer "number_of_people"
-    t.decimal "total_amount", precision: 10, scale: 2
-    t.bigint "tour_id", null: false
-    t.bigint "user_id", null: false
+    t.datetime "booking_date"
+    t.bigint "customer_id", null: false
+    t.bigint "package_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["tour_id"], name: "index_bookings_on_tour_id"
-    t.index ["user_id"], name: "index_bookings_on_user_id"
+    t.index ["customer_id"], name: "index_bookings_on_customer_id"
+    t.index ["package_id"], name: "index_bookings_on_package_id"
   end
 
   create_table "customer_preferences", force: :cascade do |t|
@@ -71,6 +69,17 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_04_072242) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_customer_preferences_on_user_id"
+  end
+
+  create_table "customers", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.integer "phone_number"
+    t.string "address"
+    t.date "date_of_birth"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "friendly_id_slugs", force: :cascade do |t|
@@ -92,6 +101,16 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_04_072242) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["user_id"], name: "index_notifications_on_user_id"
+  end
+
+  create_table "packages", force: :cascade do |t|
+    t.string "package_name"
+    t.text "description"
+    t.decimal "price"
+    t.integer "duration"
+    t.string "inclusions"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "payments", force: :cascade do |t|
@@ -141,8 +160,6 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_04_072242) do
     t.string "destination"
     t.date "start_date"
     t.date "end_date"
-    t.decimal "minimum_price", precision: 10, scale: 2
-    t.integer "max_capcity"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -185,10 +202,15 @@ ActiveRecord::Schema[7.0].define(version: 2024_12_04_072242) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "bookings", "users"
+  add_foreign_key "bookings", "customers"
+  add_foreign_key "bookings", "packages"
   add_foreign_key "customer_preferences", "users"
   add_foreign_key "notifications", "users"
   add_foreign_key "payments", "bookings"
+  add_foreign_key "reviews", "tours"
   add_foreign_key "reviews", "users"
+  add_foreign_key "tour_packages", "tours"
+  add_foreign_key "tour_schedules", "tours"
+  add_foreign_key "vehicle_schedules", "tours"
   add_foreign_key "vehicle_schedules", "vehicles"
 end

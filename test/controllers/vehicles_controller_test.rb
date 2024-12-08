@@ -17,7 +17,7 @@ class VehiclesControllerTest < ActionDispatch::IntegrationTest
 
   test "should create vehicle" do
     assert_difference("Vehicle.count") do
-      post vehicles_url, params: { vehicle: { capcity: @vehicle.capcity, model: @vehicle.model, registration_number: @vehicle.registration_number, type: @vehicle.type } }
+      post vehicles_url, params: { vehicle: { capacity: @vehicle.capacity, model: @vehicle.model, registration_number: @vehicle.registration_number, vehicle_type: @vehicle.vehicle_type } }
     end
 
     assert_redirected_to vehicle_url(Vehicle.last)
@@ -34,7 +34,7 @@ class VehiclesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update vehicle" do
-    patch vehicle_url(@vehicle), params: { vehicle: { capcity: @vehicle.capcity, model: @vehicle.model, registration_number: @vehicle.registration_number, type: @vehicle.type } }
+    patch vehicle_url(@vehicle), params: { vehicle: { capacity: @vehicle.capacity, model: @vehicle.model, registration_number: @vehicle.registration_number, vehicle_type: @vehicle.vehicle_type } }
     assert_redirected_to vehicle_url(@vehicle)
   end
 

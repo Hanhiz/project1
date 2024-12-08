@@ -14,10 +14,10 @@ class VehiclesTest < ApplicationSystemTestCase
     visit vehicles_url
     click_on "New vehicle"
 
-    fill_in "Capcity", with: @vehicle.capcity
+    fill_in "Capacity", with: @vehicle.capacity
     fill_in "Model", with: @vehicle.model
     fill_in "Registration number", with: @vehicle.registration_number
-    fill_in "Type", with: @vehicle.type
+    fill_in "Vehicle type", with: @vehicle.vehicle_type
     click_on "Create Vehicle"
 
     assert_text "Vehicle was successfully created"
@@ -28,10 +28,10 @@ class VehiclesTest < ApplicationSystemTestCase
     visit vehicle_url(@vehicle)
     click_on "Edit this vehicle", match: :first
 
-    fill_in "Capcity", with: @vehicle.capcity
+    fill_in "Capacity", with: @vehicle.capacity
     fill_in "Model", with: @vehicle.model
     fill_in "Registration number", with: @vehicle.registration_number
-    fill_in "Type", with: @vehicle.type
+    fill_in "Vehicle type", with: @vehicle.vehicle_type
     click_on "Update Vehicle"
 
     assert_text "Vehicle was successfully updated"

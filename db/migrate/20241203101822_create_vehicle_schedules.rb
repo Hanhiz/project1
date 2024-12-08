@@ -9,5 +9,7 @@ class CreateVehicleSchedules < ActiveRecord::Migration[7.0]
 
       t.timestamps
     end
+    # Rename column if it already exists 
+    rename_column :vehicles, :type, :vehicle_type if column_exists?(:vehicles, :type)
   end
 end

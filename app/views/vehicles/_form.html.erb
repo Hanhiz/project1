@@ -12,13 +12,12 @@
 <% end %>
 
   <div class="mb-6">
-      <%= form.label :type, class: label_class %>
-      <%= form.select :type, Vehicle.types.keys.map { |type| [type.humanize, type] }, {}, class: input_class %>
-    </div>
-    
+        <%= form.label :vehicle_type, class: label_class %>
+          <%= form.select :vehicle_type, Vehicle.vehicle_types.keys.map { |type| [type.humanize, type] }, {}, class: input_class %>
+      </div>
   <div class="mb-6">
-        <%= form.label :capcity, class: label_class %>
-          <%= form.number_field :capcity, class: input_class %>
+        <%= form.label :capacity, class: label_class %>
+          <%= form.number_field :capacity, class: input_class %>
       </div>
   <div class="mb-6">
         <%= form.label :model, class: label_class %>

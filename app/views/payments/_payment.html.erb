@@ -1,5 +1,10 @@
 <div id="<%= dom_id payment %>">
   <p>
+    <strong>Booking:</strong>
+    <%= payment.booking_id %>
+  </p>
+
+  <p>
     <strong>Date:</strong>
     <%= payment.date %>
   </p>
@@ -12,11 +17,6 @@
   <p>
     <strong>Method:</strong>
     <%= payment.method %>
-  </p>
-
-  <p>
-    <strong>Booking:</strong>
-    <%= payment.booking_id %>
   </p>
 
 </div>

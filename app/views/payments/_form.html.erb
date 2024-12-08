@@ -12,6 +12,10 @@
 <% end %>
 
   <div class="mb-6">
+        <%= form.label :booking_id, class: label_class %>
+          <%= form.text_field :booking_id, class: input_class %>
+      </div>
+  <div class="mb-6">
         <%= form.label :date, class: label_class %>
           <%= form.date_field :date, class: input_class %>
       </div>
@@ -21,11 +25,7 @@
       </div>
   <div class="mb-6">
         <%= form.label :method, class: label_class %>
-          <%= form.text_field :method, class: input_class %>
-      </div>
-  <div class="mb-6">
-        <%= form.label :booking_id, class: label_class %>
-          <%= form.text_field :booking_id, class: input_class %>
+          <%= form.select :method, Payment.methods.keys.map { |type| [type.humanize, type] }, {}, class: input_class %>
       </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>

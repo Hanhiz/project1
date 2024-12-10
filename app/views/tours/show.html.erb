@@ -37,5 +37,13 @@
         <p class="font-semibold">Max capcity:</p>
         <p><%= @tour.max_capcity %></p>
       </li>
+      <li>
+        <p> 
+          <strong>Image:</strong> 
+          <% if @tour.image.attached? %> 
+            <%= image_tag @tour.image if @tour.image.attached? %>
+          <% end %> 
+        </p>
+      </li>
   </ul>
 </div>

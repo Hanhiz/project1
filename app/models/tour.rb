@@ -4,6 +4,8 @@ class Tour < ApplicationRecord
     has_many :vehicle_schedules
     has_many :bookings
     has_many :tour_schedules
+    
+    has_one_attached :image
 
     validates_presence_of :name, :destination, :start_date, :end_date, :minimum_price, :max_capcity
     validates_uniqueness_of :name
@@ -22,4 +24,14 @@ class Tour < ApplicationRecord
       end
     end
   end
+
+  def self.search(term)
+    if term
+      where('name LIKE ?', "%#{term}%")
+    else
+      all
+    end
+  end
+  
+
   

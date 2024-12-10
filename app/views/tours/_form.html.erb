@@ -35,6 +35,10 @@
         <%= form.label :max_capcity, class: label_class %>
           <%= form.number_field :max_capcity, class: input_class %>
       </div>
+  <div class="mb-6"> 
+        <%= form.label :image, class: label_class %> 
+          <%= form.file_field :image, class: input_class %>
+     </div>
 
 <%= form.submit class: button_class(theme: 'primary') %>
 

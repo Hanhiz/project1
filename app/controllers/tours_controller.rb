@@ -3,7 +3,11 @@ class ToursController < ApplicationController
 
   # GET /tours or /tours.json
   def index
-    @tours = Tour.all
+    @tours = if params[:term]
+      Tour.where('name LIKE ?', "%#{params[:term]}%")
+    else
+      Tour.all
+    end
   end
 
   # GET /tours/1 or /tours/1.json
@@ -18,7 +22,7 @@ class ToursController < ApplicationController
   # GET /tours/1/edit
   def edit
   end
-
+  
   # POST /tours or /tours.json
   def create
     @tour = Tour.new(tour_params)
@@ -65,6 +69,6 @@ class ToursController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def tour_params
-      params.require(:tour).permit(:name, :destination, :start_date, :end_date, :minimum_price, :max_capcity)
+      params.require(:tour).permit(:name, :destination, :start_date, :end_date, :minimum_price, :max_capcity, :term, :image)
     end
 end

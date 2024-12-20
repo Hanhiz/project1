@@ -1,0 +1,5 @@
+# app/views/bookings/get_tour_packages.js.erb
+$('#booking_tour_package_id').empty().append('<option>Select a Tour Package</option>');
+<% @tour_packages.each do |package| %>
+  $('#booking_tour_package_id').append('<option value="<%= package.id %>"><%= package.name %></option>');
+<% end %>

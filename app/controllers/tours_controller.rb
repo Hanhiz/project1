@@ -3,10 +3,23 @@ class ToursController < ApplicationController
 
   # GET /tours or /tours.json
   def index
-    @tours = if params[:term]
-      Tour.where('name LIKE ?', "%#{params[:term]}%")
-    else
-      Tour.all
+    @tours = Tour.all
+    @tours_by_destination = Tour.group(:destination).count
+  
+    if params[:term].present?
+      @tours = @tours.where('name LIKE ?', "%#{params[:term]}%")
+    end
+  
+    if params[:destination].present?
+      @tours = @tours.where('destination LIKE ?', "%#{params[:destination]}%")
+    end
+  
+    if params[:min_price].present? && params[:max_price].present?
+      @tours = @tours.where(minimum_price: params[:min_price]..params[:max_price])
+    end
+  
+    if params[:start_date].present? && params[:end_date].present?
+      @tours = @tours.where(start_date: params[:start_date]..params[:end_date])
     end
   end
 

@@ -11,10 +11,14 @@ Rails.application.routes.draw do
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
-  root "tours#index"
+  root "home#index"
 
   resources :tours
-  resources :bookings
+  resources :bookings do
+    collection do
+      get :get_tour_packages
+    end
+  end
   resources :tour_packages
   resources :tour_schedules
   resources :vehicles
@@ -23,4 +27,5 @@ Rails.application.routes.draw do
   resources :reviews
   resources :customer_preferences
   resources :notifications
+
 end

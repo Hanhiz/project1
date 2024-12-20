@@ -1,80 +1,859 @@
-<div class="max-w-5xl mx-auto mt-4 lg:p-12 p-4 grid grid-cols-1 lg:grid-cols-12 gap-x-12 gap-y-4 relative z-20">
-  <div class="lg:col-span-12 text-center">
-    <div class="flex justify-center mb-6">
-      <svg fill="none" class="w-16 h-16" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><linearGradient id="a" gradientUnits="userSpaceOnUse" x1="56" x2="463" y1="46" y2="465"><stop offset="0" stop-color="#8038ed"/><stop offset="1" stop-color="#3a0092"/></linearGradient><path d="m0 0h512v512h-512z" fill="#fff"/><rect fill="url(#a)" height="512" rx="110" width="512"/><g stroke="#fff"><circle cx="190" cy="302" r="79.5" stroke-opacity=".9" stroke-width="25"/><circle cx="254" cy="377" r="34" stroke-opacity=".8" stroke-width="10"/><circle cx="282" cy="227" r="106" stroke-width="50"/></g></svg>
-    </div>
-    <h1 class="mb-4 text-2xl font-semibold text-gray-800 text-center mt-3"><span class="sr-only">Kickoff Tailwind</span><svg class="lg:h-12 h-auto lg:w-auto w-full inline" fill="none" height="68" viewBox="0 0 611 68" width="611" xmlns="http://www.w3.org/2000/svg"><g class="fill-current"><path d="m67.3 56.1-1.4-1.3-2.8 2.6-8.1-13c-2.9-4.7-6.7-8.3-11.6-11 5.5-4.7 10.9-8.9 16.4-12.8l-10.3-11.5c-4.9 4.9-10.3 9.4-16.2 13.5 0-7.9 1.9-15.4 5.8-22.6h-1.7c-4 6.7-6 13.9-6 21.4v18.1c0 6.3-1.9 10.9-5.8 14-.3.3-4.8 2.7-13.3 7.3l-1.1-.8c5.8-4.9 9.2-8 10.3-9.1 3.3-3.7 5-7.7 5-12v-20c0-5.5 1.8-11.6 5.3-18.099998v-.7000033c-3.6 1.3000013-6.2 1.9000013-7.9 1.9000013-.8 0-2.5-.3-5.1-.8-2.6-.600002-4.7-.899998-6.3-.899998-7 0-11.2 4.399998-12.5 13.199998l.3.1c2.3-3.6 5.4-5.4 9.2-5.4l7.3.5c2.1.1 5.9-1.4 11.2-4.7l.2.4c-4.1 3.1-7 6-8.7 8.7-2.1 3.3-3.1 7.3-3.1 11.8-1.9-.9-3.8-1.3-5.8-1.3-3.5 0-6 2-7.5 5.9 2.4-.7 4.1-1 5.1-1l1.8.2c2.6.3 4.5 1.8 5.8 4.6 1 2.2 1.5 4.8 1.5 7.7-2-1.1-4.1-1.6-6.4-1.6-3.1 0-4.9 1.7-5.6 5.2 1.5-.7 2.8-1.1 3.9-1.1 2 0 3.4 1.1 4.1 3.4l.3 2.7c0 3-1.3 6-3.9 8.9-3.1 3.2-5.4 5.6-6.9 7.1l1.2 1.5c4.1-1.3 7.3-2.2 9.7-2.8 3.1-.7 5.8-1.1 8.1-1.1 4.7 0 10.2 1.3 16.7 3.9l10.6-12.1c1.7 3 3 5.1 3.9 6.4 1.5 2.1 2.9 4 4.3 5.6zm-18.2-29.9c-2.8 2.1-5.3 4.1-7.4 5.9l-7.1 6-1.3-.1v-13l9-6.6zm-1.1 26.7-4.4 5c-4.7-2.1-9.9-3.1-15.7-3.1l-1.3-.2c3.8-3.5 6-8 6.7-13.6l.3-.1c3.3 0 6.2 1.3 8.7 3.8 1.5 1.5 3.4 4.3 5.7 8.2z"/><path d="m85.3219 4.5h-7.4l-2.4 10.2h1.3zm2.6 54.5-1-.9-1.8 1.2c-1.6-.8-2.5-1.9-2.8-3.2v-27.7l2.5-2.8-7.7-6.4-7.4 6.1 2.9 3.1v26.1l-.1 1.8c-.3 4.3 1.8 7.7 6.3 10.1z"/><path d="m117.609 57.2-1-1.1-4.3 3.2-8.8-4.4v-28.4l9 5.1 4.3-6.1-10.1-6.3c-3.7 3.3-7.8004 6-12.3004 7.9v25.5c0 3.1-.9 5.5-2.7 7.1 4.3.9 8.9004 3 13.8004 6.4 4-2.9 8-5.9 12.1-8.9z"/><path d="m162.282 59-1.2-1.3-1.9 1c-1.1-1.5-2-3.8-2.6-6.8-.8-3.7-1.4-6.2-1.9-7.3-1.1-2.9-3-5.3-5.6-7.2 4.2-4.2 7.3-7 9.2-8.5l-9.1-9.6-13 11.4v-18.7c0-4.1 1.6-7.1 4.7-9-3.5 0-6.7 1.6-9.7 4.9l-1.4.1c-1.9-1.5-4.1-2.5-6.5-3.1 2.3 2.3 3.5 4.6 3.5 6.8v8.9h-5.1v5h5.1v27c0 3.1-.8 5.5-2.5 7.2 4 1.2 8.8 3.4 14.5 6.6l9.6-10.1c.7 4.7 2.3 8 4.8 9.8zm-12.1-25.7-14.1 12.1v-11.5l7.9-7.2zm-2.3 20.2-5.8 6-6-3.1v-8.3l5.9-4.7c3.4 2.9 5.4 6.2 5.9 10.1z"/><path d="m198.618 58.8v-32.6c-4.3-.6-9.6-2.9-15.9-7-4.1 3.8-8.8 6.5-14.2 8v23.7c0 3.7-.9 6.2-2.7 7.7 6.7 1.4 12.7 4 18 7.9 3.9-3.3 8.8-5.9 14.8-7.7zm-9.4-.2c-1.1-.3-2.6-.8-4.4-1.5-2.5-.9-4.9-1.9-7.1-2.8v-27.6l11.5 4.4z"/><path d="m231.59 57.3-1.1-1.2-3.4 2.8-7.2-4.6v-28.6h6.8l.7-5.1h-7.5v-10.2l8.6 1.8 2-6.9-9.6-2.3c-3.9 3.5-7.5 5.9-10.9 7.4v10.2h-4.4l-.9 5.1h5.1v25.7c0 3.1-.8 5.5-2.5 7.2 5.9 2.3 10.7 4.8 14.4 7.6z"/><path d="m261.863 57.3-1.1-1.2-3.4 2.8-7.2-4.6v-28.6h6.8l.7-5.1h-7.5v-10.2l8.6 1.8 2-6.9-9.6-2.3c-3.9 3.5-7.5 5.9-10.9 7.4v10.2h-4.4l-.9 5.1h5.1v25.7c0 3.1-.8 5.5-2.5 7.2 5.9 2.3 10.7 4.8 14.4 7.6z"/><path d="m359.463.0999987-.6-.0999987c-2.1 3.5-5.3 5.3-9.7 5.3-2.1 0-4.7-.4-7.8-1.3s-5.6-1.6-7.5-2.1c-3.6-.900001-7.7-1.300002-12.2-1.300002-14.1 0-22.1 6.100002-24.1 18.400002h.4c2.5-3.5 4.9-6 7.2-7.3 2.6-1.4 5.4-2 8.4-1.9l6.1.3c-4.5 3.5-8 6.6-10.3 9.5-3.1 3.7-5.2 7.8-6.4 12.4-.7 2.7-1.1 5.3-1.1 7.6 0 5.6 1.6 10.7 4.9 15.3 5.7 8 14.2 12 25.4 12 2.7 0 5.5-.3 8.2-1 9.1-2.3 15.4-9.3 18.7-21l-.5-.3c-4.4 6.7-10.1 11.1-17.1 13.3v-44l1.2.1c4.5.4 8.4-.6 11.7-3 3.4-2.5 5.1-6.1 5.1-10.9000013zm-20.2 58.2000013-1.3.3c-6.3 0-11.7-1.7-16.1-5 4-3.7 6.7-6.7 8.1-9.1 1.9-3.2 2.8-7.1 2.8-11.6v-20.4l6.5 1.3zm-16.3-14.4c0 3.4-1.1 6.1-3.3 8.2-5.5-5.3-8.2-11.5-8.2-18.5 0-8.4 3.3-16.1 10-23.2l1.5.4z"/><path d="m399.191 59-1.1-.9-1.8.9c-1.3-.4-2.3-1.4-2.8-3.1v-26.2c.7-2.7 1.8-5.2 3.4-7.7l-.2-.4-2.8 2.2-14.2-4.7c-3.1 2.9-6.6 4.2-10.3 3.9l-1.3-.1 4.8 12.5c-6.6 5.9-9.9 11.9-9.9 18.1 0 4.1 2.4 8.4 7.1 12.8h.5l13.6-10.9c0 4.9 2.1 8.5 6.4 10.8zm-15-18.8-10.3-5-4.2-11.4 14.5 5.4zm.1 12.6-7.5 6.4c-3.9-3.9-5.8-8.1-5.8-12.6 0-3.1 1-6.4 2.9-9.8l10.4 5.2z"/><path d="m417.939 4.5h-7.4l-2.4 10.2h1.3zm2.6 54.5-1-.9-1.8 1.2c-1.6-.8-2.5-1.9-2.8-3.2v-27.7l2.5-2.8-7.7-6.4-7.4 6.1 2.9 3.1v26.1l-.1 1.8c-.3 4.3 1.8 7.7 6.3 10.1z"/><path d="m447.526 58.4-1.2-1.3-2.4 1.8-7.3-4.6v-42.1c0-3.7 1.6-6.7 4.9-9.1-3.7.5-7.2 2.2-10.3 5.1l-1.1.1c-1.9-1.5-4.1-2.6-6.6-3.2 2.2 2.3 3.3 4.4 3.3 6.4v39.9c0 2.9-.9 5.3-2.6 7.2 6.3 2.3 11 4.8 14.2 7.6z"/><path d="m504.786 58.8v-28.8c0-3.3-2.3-6.9-6.8-10.8l-13.6 10.5c-.3-3.9-2.5-7.3-6.5-10.4l-13.5 10.1c0-2.8-1.2-5.9-3.7-9.2-2.4-3.4-3.6-5.5-3.6-6.2 0-2 1.3-4.2 4-6.6l-.5-.8c-6.6 3.5-9.9 7.4-9.9 11.7 0 2.7 1.5 5.8 4.4 9.3v23.3c0 3.4-.9 6-2.8 7.7 7.1 1.9 12.9 4.5 17.5 7.9 3.1-2.5 6.1-3.8 9.2-3.8 2.7 0 6.6 1.3 11.7 3.8 4.3-3.7 9-6.3 14.1-7.7zm-8.5.3c-2.1-.6-3.6-1-4.5-1.2-2.7-.7-5.1-1.5-7.3-2.3v-23.3l8-5.9c.9.9 1.5 1.5 1.9 2 1.3 1.3 1.9 2.6 1.9 3.7zm-21.1 0c-4.5-1.5-8.2-2.9-11-4.2v-22.6l7.4-5.9c1.8 2 2.8 3.1 2.9 3.4.5.7.7 1.5.7 2.3z"/><path d="m524.58 4.5h-7.4l-2.4 10.2h1.3zm2.6 54.5-1-.9-1.8 1.2c-1.6-.8-2.5-1.9-2.8-3.2v-27.7l2.5-2.8-7.7-6.4-7.4 6.1 2.9 3.1v26.1l-.1 1.8c-.3 4.3 1.8 7.7 6.3 10.1z"/><path d="m571.366 59.1-1-1-2.1 1.2c-1.3-.9-2.3-2-2.8-3.2v-26.3c1.4-2.3 2.9-4.4 4.4-6.3l-1-1.1-4.3 3.4-6.9-6.4c-2.9 2.7-7.2 6.2-12.8 10.3 0-4.5-2.1-8-6.3-10.5l-8.2 7.5 1 1.1 1.6-1.1c1.6 1.3 2.4 2.9 2.4 4.6v25.7l-2.8 3.1 7.6 6.4 7.2-6.4-2.7-3.4v-24.8l7.1-5.2 4.5 3.9v23.9c0 6 1.3 8.9 6.1 12z"/><path d="m609.502 25.9c0-1.5.3-2.9.8-4.3-1.7.7-3.1 1.8-4 3.3l-30.4-19.4v9.5l12.7 8.2c-3.7 1.9-6.7 3.2-9.1 3.8v23.9c0 3.5-.9 6-2.8 7.7 6.6 1.4 12.6 4 18 7.9 4.1-3.3 9-5.8 14.8-7.7zm-9.5 32.7-11.2-4v-27.3l3.3-2 7.9 5.3z"/></g></svg>
-    </span></h1>
-  <p class="leading-snug text-gray-700 text-lg max-w-3xl mx-auto pb-6">A free and simple starting point for Ruby on Rails applications.</p>
-</div>
-<div class="lg:col-span-6">
-  <h3 class="font-semibold text-lg text-gray-700">What's under the hood?</h3>
-  <ul class="list-disc leading-relaxed pl-4 pt-2">
-    <li class="pb-1">Powered by <%= link_to "Ruby on Rails 7", "https://rubyonrails.org", target: :_blank, class: "text-indigo-600 hover:text-indigo-700 underline" %></li>
-    <li class="pb-1"><%= link_to "Friendly ID", "https://github.com/norman/friendly_id", target: :_blank, class: "text-indigo-600 hover:text-indigo-700 underline" %> preconfigured for pretty URLs.</li>
-    <li class="pb-1"><%= link_to "Devise", "https://github.com/heartcombo/devise", target: :_blank, class: "text-indigo-600 hover:text-indigo-700 underline" %> authentication strategies out of the box.</li>
-    <li class="pb-1"><%= link_to "Stripe", "https://stripe.com", target: :_blank, class: "text-indigo-600 hover:text-indigo-700 underline" %> JS and the <%= link_to "Stripe gem", "https://rubygems.org/gems/stripe/", target: :_blank, class: "text-indigo-600 hover:text-indigo-700 underline" %> installed by default for modern payment solutions.</li>
-    <li class="pb-1"><%= link_to "Tailwind CSS", "https://tailwindcss.com", target: :_blank, class: "text-indigo-600 hover:text-indigo-700 underline" %>.</li>
-    <li class="pb-1">Customized and easily themeable Devise views.</li>
-    <li class="pb-1">View helpers for quick form styling with Tailwind CSS.</li>
-    <li class="pb-1">Custom scaffold templates.</li>
-  </ul>
 
-  <p class="text-xs text-gray-600 max-w-lg mt-6">*This template comes with support for Tailwind CSS only. You will need to adjust the markup to make use of other frameworks. <%= link_to "Read more", "https://github.com/rails/cssbundling-rails#installation", target: :_blank, class: "underline text-indigo-600 hover:text-indigo-700" %></p>
+<!doctype html>
+<html lang="en">
+   <head>
+      <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <!-- Bootstrap CSS -->
+      <link rel="stylesheet" href="https://bookingtour.vn/templates/themes/vendors/bootstrap/css/bootstrap.min.css" media="all">
+      <!-- Fonts Awesome CSS -->
+      <link rel="stylesheet" type="text/css" href="https://bookingtour.vn/templates/themes/vendors/fontawesome/css/all.min.css">
+      <!-- jquery-ui css -->
+      <link rel="stylesheet" type="text/css" href="https://bookingtour.vn/templates/themes/vendors/jquery-ui/jquery-ui.min.css">
+      <!-- modal video css -->
+      <link rel="stylesheet" type="text/css" href="https://bookingtour.vn/templates/themes/vendors/modal-video/modal-video.min.css">
+      <!-- light box css -->
+      <link rel="stylesheet" type="text/css" href="https://bookingtour.vn/templates/themes/vendors/lightbox/dist/css/lightbox.min.css">
+      <!-- slick slider css -->
+      <link rel="stylesheet" type="text/css" href="https://bookingtour.vn/templates/themes/vendors/slick/slick.css">
+      <link rel="stylesheet" type="text/css" href="https://bookingtour.vn/templates/themes/vendors/slick/slick-theme.css">
+      <!-- google fonts -->
+      <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,400&display=swap" rel="stylesheet">
+      <!-- Custom CSS -->
+      <link rel="stylesheet" type="text/css" href="https://bookingtour.vn/templates/themes/css/style.css?v4">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+      <title>Booking Tour with Fly Tour </title>
+	   <meta name="description" content="FlyTour - Travel Easily with FlyTour" />
+		<meta name="keywords" content="Đặt tour trong nước, Đặt tour ngoài nước, BookingTour, Danh sách khởi hành TOUR"/>
+		<link rel="canonical" href="https://localhost:3000" />
+   </head>
+   <body class="home">
+      <div id="page" class="full-page">
+         <main id="content" class="site-main">
+            <!-- Home slider html start -->
+            <section class="home-slider-section">
+               <div class="home-slider">
+                  <div class="home-banner-items">
+                     <div class="banner-inner-wrap" style="background-image: url(https://bookingtour.vn/templates/themes/images/slider-banner-1.jpg?v3);"></div>
+                        <div class="banner-content-wrap">
+                           <div class="container">
+                              <div class="banner-content text-center">
+                                 <h2 class="banner-title">Go Anywhere</h2>
+                                 <p>Let FlyTour give you best choices!.</p>
+                                 <a href="http://localhost:3000/tours" class="button-primary">More</a>
+                              </div>
+                           </div>
+                        </div>
+                     <div class="overlay"></div>
+                  </div>
+                  <div class="home-banner-items">
+                     <div class="banner-inner-wrap" style="background-image: url(https://bookingtour.vn/templates/themes/images/slider-banner-2.jpg?v3);"></div>
+                        <div class="banner-content-wrap">
+                           <div class="container">
+                              <div class="banner-content text-center">
+                                 <h2 class="banner-title">EXPERIENCE THE NATURE'S BEAUTY</h2>
+                                 <p>Explore beautiful natural scenery with exciting adventures</p>
+                                 <a href="https://bookingtour.vn/destination" class="button-primary">CONTINUE READING</a>
+                              </div>
+                           </div>
+                        </div>
+                     <div class="overlay"></div>
+                  </div>
+               </div>
+            </section>
+            <!-- slider html start -->
+            <!-- Home search field html start -->
+            <style>
+			.thumb-img{
+    width: 100%;
+    background-position: 50%;
+    background-color: #eee;
+}
+.thumb_5x3 {
+    padding-top: 62.5%;
+}
+.svg-icon {
+    display: inline-block;
+    width: 1em;
+    height: auto;
+    color: inherit;
+    vertical-align: middle;
+    fill: none;
+    stroke: currentColor;
+}
+.svg-fill {
+    fill: currentColor;
+    stroke: none;
+}
+.icon--24 {
+    width: 24px;
+    height: 24px;
+}
+.checkup--sticky{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+}
+            #show_data {
+                  z-index: 11;
+                  top: 90px;
+                  left: 0px;
+                  display: none;
+                  width: 92%;
+                  position: absolute;
+                  border: 1px solid #aaaaaa;
+                  background-color: #ffffff;
+                  margin-left: 3px;
+            }
+            #show_data ul {
+                  float: left;
+                  margin-bottom: 0px;
+				  padding-left:3px; important;
+            }
+            #show_data ul li{
+                  text-decoration: none;
+                  display: -webkit-inline-box;
+                  width: 100%;
+                  padding: .7em .4em .7em .6em;
+                  line-height: 1.5;
+                  zoom: 1;
+            }
+            #show_data li a{
+                color: #000 !important;
+                  font-size: 14px;
+            }
+			
+			#show_data2 {
+                  z-index: 11;
+                  top: 90px;
+                  left: 0px;
+                  display: none;
+                  width: 92%;
+                  position: absolute;
+                  border: 1px solid #aaaaaa;
+                  background-color: #ffffff;
+                  margin-left:8px;
+            }
+            #show_data2 ul {
+                  float: left;
+                  margin-bottom: 0px;
+				  padding-left:3px; important;
+            }
+            #show_data2 ul li{
+                  text-decoration: none;
+                  display: -webkit-inline-box;
+                  width: 100%;
+                  padding: .7em .4em .7em .6em;
+                  line-height: 1.5;
+                  zoom: 1;
+            }
+            #show_data2 li a{
+                color: #000 !important;
+                  font-size: 14px;
+            }
+			
+            </style>
+            <!-- Home packages section html start -->
+            <section class="package-section">
+               <div class="container">
+                  <div class="section-heading text-center">
+                     <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                           <h5 class="dash-style">EXPLORE GREAT PLACES</h5>
+                           <h2>POPULAR TOURS</h2>
+                           <p>Discover now tours, travel activities and places to visit for your travel itinerary.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="package-inner">
+                     <div class="row">
+					                         <div class="col-lg-4 col-md-6">
+                           <div class="package-wrap">
+                              <figure class="feature-image">
+                                 <a href="http://localhost:3000/tours/10">
+                                    <%= image_tag("phuquoc.jpg", class:"lazyload") %>
+                                 </a>
+                              </figure>
+							               <div class="package-price">
+                                 <h6>
+                                    <span> 2,100,000₫ </span>
+                                 </h6>
+                              </div>
+							               <div class="package-content-wrap">
+                                 <div class="package-meta text-center">
+                                    <ul>
+                                       <li>
+                                          <i class="far fa-clock"></i>
+                                          5N/4Đ                                        </li>
+                                       <li>
+                                          <i class="fas fa-user-friends"></i>
+                                       </li>
+                                       <li>
+                                          <i class="fas fa-map-marker-alt"></i>
+										            <a style="color:#ffffff" href="http://localhost:3000/tours">Vietnam</a>
+                                       </li>
+                                    </ul>
+                                 </div>
+                                 <div class="package-content">
+                                    <h3>
+                                       <a href="http://localhost:3000/tours/10">Phu Quoc Island Escape</a>
+                                    </h3>
+                                    <div class="review-area">
+                                       <span class="review-text">Departure from: Phu Quoc</span>
+                                       <div class="rating-start" title="Rated 5 out of 5">
+                                          <span style="width: 95%"></span>
+                                       </div>
+                                    </div>
+                                    
+                                    <div class="btn-wrap">
+                                       <a href="http://localhost:3000/bookings/new" class="button-text width-6">Book Tour<i class="fas fa-arrow-right"></i></a>
+                                       <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+						                        <div class="col-lg-4 col-md-6">
+                           <div class="package-wrap">
+                              <figure class="feature-image">
+                                 <a href="http://localhost:3000/tours/8">
+                                    <%= image_tag("sapa.jpg", class:"lazyload") %>
+                                 </a>
+                              </figure>
+							            <div class="package-price">
+                                 <h6>
+                                    <span> 1,900,000₫ </span>
+                                 </h6>
+                              </div>
+							      <div class="package-content-wrap">
+                                 <div class="package-meta text-center">
+                                    <ul>
+                                       <li>
+                                          <i class="far fa-clock"></i>
+                                          5N/4Đ                                        </li>
+                                       <li>
+                                          <i class="fas fa-user-friends"></i>
+                                       </li>
+                                       <li>
+                                          <i class="fas fa-map-marker-alt"></i>
+										
+                                             <a style="color:#ffffff" href="http://localhost:3000/tours">Vietnam</a>                                        </li>
+                                    </ul>
+                                 </div>
+                                 <div class="package-content">
+                                    <h3>
+                                       <a href="http://localhost:3000/tours/8">Sapa Trekking Tour</a>
+                                    </h3>
+                                    <div class="review-area">
+                                       <span class="review-text">Departure from: Sapa</span>
+                                       <div class="rating-start" title="Rated 5 out of 5">
+                                          <span style="width: 95%"></span>
+                                       </div>
+                                    </div>
+                                    
+                                    <div class="btn-wrap">
+                                       <a href="http://localhost:3000/bookings/new" class="button-text width-6">Book Tour<i class="fas fa-arrow-right"></i></a>
+                                       <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+						      <div class="col-lg-4 col-md-6">
+                           <div class="package-wrap">
+                              <figure class="feature-image">
+                                 <a href="http://localhost:3000/tours/9">
+                                    <%= image_tag("hoian.jpg", class:"lazyload") %>
+                                 </a>
+                              </figure>
+							         <div class="package-price">
+                                 <h6>
+                                    <span> 2,000,000₫ </span>
+                                 </h6>
+                              </div>
+							         <div class="package-content-wrap">
+                                 <div class="package-meta text-center">
+                                    <ul>
+                                       <li>
+                                          <i class="far fa-clock"></i>
+                                          5N/4Đ                                        </li>
+                                       <li>
+                                          <i class="fas fa-user-friends"></i>
+                                       </li>
+                                       <li>
+                                          <i class="fas fa-map-marker-alt"></i>
+										
+                                             <a style="color:#ffffff" href="http://localhost:3000/tours">Vietnam</a>                                        </li>
+                                    </ul>
+                                 </div>
+                                 <div class="package-content">
+                                    <h3>
+                                       <a href="http://localhost:3000/tours/9">Hoi An Ancient Town</a>
+                                    </h3>
+                                    <div class="review-area">
+                                       <span class="review-text">Departure from: Hoi An</span>
+                                       <div class="rating-start" title="Rated 5 out of 5">
+                                          <span style="width: 95%"></span>
+                                       </div>
+                                    </div>
+                                    
+                                    <div class="btn-wrap">
+                                       <a href="http://localhost:3000/bookings/new" class="button-text width-6">Book Tour<i class="fas fa-arrow-right"></i></a>
+                                       <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+						      <div class="col-lg-4 col-md-6">
+                           <div class="package-wrap">
+                              <figure class="feature-image">
+                                 <a href="http://localhost:3000/tours/7">
+                                    <%= image_tag("nhatrang.jpg", class:"lazyload") %>
+                                 </a>
+                              </figure>
+							      <div class="package-price">
+                                 <h6>
+                                    <span> 2,200,000₫ </span>
+                                 </h6>
+                              </div>
+							                                <div class="package-content-wrap">
+                                 <div class="package-meta text-center">
+                                    <ul>
+                                       <li>
+                                          <i class="far fa-clock"></i>
+                                          5N/4Đ                                        </li>
+                                       <li>
+                                          <i class="fas fa-user-friends"></i>
+                                                                                 </li>
+                                       <li>
+                                          <i class="fas fa-map-marker-alt"></i>
+										
+                                             <a style="color:#ffffff" href="http://localhost:3000/tours">Vietnam</a>                                        </li>
+                                    </ul>
+                                 </div>
+                                 <div class="package-content">
+                                    <h3>
+                                       <a href="http://localhost:3000/tours/7">Nha Trang Beach Getaway</a>
+                                    </h3>
+                                    <div class="review-area">
+                                       <span class="review-text">Departure from: Nha Trang</span>
+                                       <div class="rating-start" title="Rated 5 out of 5">
+                                          <span style="width: 95%"></span>
+                                       </div>
+                                    </div>
+                                    <div class="btn-wrap">
+                                       <a href="http://localhost:3000/bookings/new" class="button-text width-6">Book Tour<i class="fas fa-arrow-right"></i></a>
+                                       <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+						      <div class="col-lg-4 col-md-6">
+                           <div class="package-wrap">
+                              <figure class="feature-image">
+                                 <a href="http://localhost:3000/tours/6">
+                                    <%= image_tag("phongnha.jpg", class:"lazyload") %>
+                                 </a>
+                              </figure>
+							      <div class="package-price">
+                                 <h6>
+                                    <span> 2,500,000₫ </span>
+                                 </h6>
+                              </div>
+							                                <div class="package-content-wrap">
+                                 <div class="package-meta text-center">
+                                    <ul>
+                                       <li>
+                                          <i class="far fa-clock"></i>
+                                          7N/6Đ                                        </li>
+                                       <li>
+                                          <i class="fas fa-user-friends"></i>
+                                                                                 </li>
+                                       <li>
+                                          <i class="fas fa-map-marker-alt"></i>
+										
+                                             <a style="color:#ffffff" href="http://localhost:3000/tours">Vietnam</a>                                        </li>
+                                    </ul>
+                                 </div>
+                                 <div class="package-content">
+                                    <h3>
+                                       <a href="http://localhost:3000/tours/6">Phong Nha Cave Adventure</a>
+                                    </h3>
+                                    <div class="review-area">
+                                       <span class="review-text">Departure from: Phong Nha</span>
+                                       <div class="rating-start" title="Rated 5 out of 5">
+                                          <span style="width: 95%"></span>
+                                       </div>
+                                    </div>
+                                    <div class="btn-wrap">
+                                       <a href="http://localhost:3000/bookings/new" class="button-text width-6">Book Tour<i class="fas fa-arrow-right"></i></a>
+                                       <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6">
+                           <div class="package-wrap">
+                              <figure class="feature-image">
+                                 <a href="http://localhost:3000/tours/2">
+                                    <%= image_tag("halong.jpg", class:"lazyload") %>
+                                 </a>
+                              </figure>
+							      <div class="package-price">
+                                 <h6>
+                                    <span> 2,000,000₫ </span>
+                                 </h6>
+                              </div>
+							                                <div class="package-content-wrap">
+                                 <div class="package-meta text-center">
+                                    <ul>
+                                       <li>
+                                          <i class="far fa-clock"></i>
+                                          7N/6Đ                                        </li>
+                                       <li>
+                                          <i class="fas fa-user-friends"></i>
+                                                                                 </li>
+                                       <li>
+                                          <i class="fas fa-map-marker-alt"></i>
+										
+                                             <a style="color:#ffffff" href="http://localhost:3000/tours">Vietnam</a>                                        </li>
+                                    </ul>
+                                 </div>
+                                 <div class="package-content">
+                                    <h3>
+                                       <a href="http://localhost:3000/tours/7">Ha Long Bay Cruise</a>
+                                    </h3>
+                                    <div class="review-area">
+                                       <span class="review-text">Departure from: Ha Long</span>
+                                       <div class="rating-start" title="Rated 5 out of 5">
+                                          <span style="width: 95%"></span>
+                                       </div>
+                                    </div>
+                                    <div class="btn-wrap">
+                                       <a href="http://localhost:3000/bookings/new" class="button-text width-6">Book Tour<i class="fas fa-arrow-right"></i></a>
+                                       <a href="#" class="button-text width-6">Wish List<i class="far fa-heart"></i></a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+						                 
+                       
+                     </div>
+                     <div class="btn-wrap text-center">
+                        <a href="http://localhost:3000/tour_packages" class="button-primary">SEE MORE TOUR PACKAGES</a>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            
+            <!-- Home special section html start -->
+            <section class="best-section">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-5">
+                        <div class="section-heading">
+                           <h5 class="dash-style">OUR TOUR GALLERY</h5>
+                           <h2>BEST TRAVELER'S SHARED PHOTOS</h2>
+                           <p>Beautiful photos on the tour journey shared by customers.</p>
+                        </div>
+						                        <figure class="gallery-img">
+							<a href="http://localhost:3000/tours"><h4>VIETNAM TOUR</h4></a>
+                           <a href="http://localhost:3000/tours"><img src="https://dulichsaigon.edu.vn/wp-content/uploads/2024/01/da-nang-top-10-thanh-pho-dang-de-du-lich-nhat.jpg" alt="Tour Vietnam"></a>
+                        </figure>
+                     </div>
+                     <div class="col-lg-7">
+                        <div class="row">
+                           <div class="col-sm-6">
+                              <figure class="gallery-img">
+                                 <img src="https://sgtt.thesaigontimes.vn/wp-content/uploads/2024/08/ma-pi-leng-6.jpg" alt="">
+                              </figure>
+                           </div>
+                           <div class="col-sm-6">
+                              <figure class="gallery-img">
+                                 <img src="https://media.vneconomy.vn/w800/images/upload/2021/10/29/vietnam2.jpeg" alt="">
+                              </figure>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-12">
+                              <figure class="gallery-img">
+                                 <img src="https://image.nhandan.vn/w800/Uploaded/2024/igpcvcvjntc8510/2023_10_25/bai-kem-top-50-bai-bien-dep-nhat-hanh-tinh-4635.jpg" alt="">
+                              </figure>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- best html end -->
+            <!-- Home client section html start -->
+            <div class="client-section">
+               <div class="container">
+                  <div class="client-wrap client-slider secondary-bg">
+                     <div class="client-item">
+                        <figure>
+                           <img src="https://bookingtour.vn/templates/themes/images/logo1.png" alt="">
+                        </figure>
+                     </div>
+                     <div class="client-item">
+                        <figure>
+                           <img src="https://bookingtour.vn/templates/themes/images/logo2.png" alt="">
+                        </figure>
+                     </div>
+                     <div class="client-item">
+                        <figure>
+                           <img src="https://bookingtour.vn/templates/themes/images/logo3.png" alt="">
+                        </figure>
+                     </div>
+                     <div class="client-item">
+                        <figure>
+                           <img src="https://bookingtour.vn/templates/themes/images/logo4.png" alt="">
+                        </figure>
+                     </div>
+                     <div class="client-item">
+                        <figure>
+                           <img src="https://bookingtour.vn/templates/themes/images/logo5.png" alt="">
+                        </figure>
+                     </div>
+                     <div class="client-item">
+                        <figure>
+                           <img src="https://bookingtour.vn/templates/themes/images/logo2.png" alt="">
+                        </figure>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!-- client html end -->
+            <!-- Home subscribe section html start -->
+            <section class="subscribe-section" style="background-image: url(https://cdn.bookingtour.vn/upload/thanhthao/2024/09/19/61-23562.jpg);">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-7">
+                        <div class="section-heading section-heading-white">
+                           <h5 class="dash-style">DISCOUNT OPPORTUNITY UP TO 50% !</h2>
+                           <h4>Sign up to receive secret offers from FlyTour!!</h4>
+                           <div class="newsletter-form">
+                              <form>
+                                 <input type="email" name="s" placeholder="Enter your phone number or email...">
+                                 <input type="submit" name="signup" value="REGISTER NOW!">
+                              </form>
+                           </div>
+                           <p>FlyTour always has SPECIAL promotions for FlyTour members.</p>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!-- subscribe html end -->
+            <!-- Home blog section html start -->
+            <section class="blog-section">
+               <div class="container">
+                  <div class="section-heading text-center">
+                     <div class="row">
+                        <div class="col-lg-8 offset-lg-2">
+                           <h5 class="dash-style">FROM OUR BLOG</h5>
+                           <h2>RECENT SHARES</h2>
+                           <p>Interesting travel experiences are shared here.</p>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="row">
+				  				  
+                     <div class="col-md-6 col-lg-4">
+                        <article class="post">
+                           <figure class="feature-image">
+                              <a href="#">
+                                 <img src="https://cdn.bookingtour.vn/thumb_x365x305/upload/2024/12/13/hanh-trinh-qua-bo-dao-nha-lisbon-va-porto8.png" alt="">
+                              </a>
+                           </figure>
+                           <div class="entry-content">
+                              <h3>
+                                 <a href="#">Journey through Portugal: Lisbon and Porto.</a>
+                              </h3>
+                              <div class="entry-meta">
+                                 <span class="byline">
+								                                     <a href="#">Hoàng Hương Chi</a>
+                                 </span>
+                                 <span class="posted-on">
+                                    <a href="#">13/12/24                                 </span>
+                                 <span class="comments-link">
+                                    <a href="#"></a>
+                                 </span>
+                              </div>
+                           </div>
+                        </article>
+                     </div>
+					 				  
+                     <div class="col-md-6 col-lg-4">
+                        <article class="post">
+                           <figure class="feature-image">
+                              <a href="#">
+                                 <img src="https://cdn.bookingtour.vn/thumb_x365x305/upload/2024/12/13/kham-pha-van-hoa-va-lich-su-tai-hy-lap-athens-va-santorini7.png" alt="">
+                              </a>
+                           </figure>
+                           <div class="entry-content">
+                              <h3>
+                                 <a href="#">Explore culture and history in Greece: Athens and Santorini.</a>
+                              </h3>
+                              <div class="entry-meta">
+                                 <span class="byline">
+								                                     <a href="#">Thái Hà Trang</a>
+                                 </span>
+                                 <span class="posted-on">
+                                    <a href="#">13/12/24                                 </span>
+                                 <span class="comments-link">
+                                    <a href="#"></a>
+                                 </span>
+                              </div>
+                           </div>
+                        </article>
+                     </div>
+					 				  
+                     <div class="col-md-6 col-lg-4">
+                        <article class="post">
+                           <figure class="feature-image">
+                              <a href="#">
+                                 <img src="https://cdn.bookingtour.vn/thumb_x365x305/upload/2024/12/13/du-lich-tay-ban-nha-madrid-barcelona-va-cac-le-hoi-truyen-thong8.jpg" alt="">
+                              </a>
+                           </figure>
+                           <div class="entry-content">
+                              <h3>
+                                 <a href="#">Spain Travel: Madrid, Barcelona and Traditional Festivals.</a>
+                              </h3>
+                              <div class="entry-meta">
+                                 <span class="byline">
+								                                     <a href="#">Nguyễn Huyền Thương</a>
+                                 </span>
+                                 <span class="posted-on">
+                                    <a href="#">13/12/24                                 </span>
+                                 <span class="comments-link">
+                                    <a href="#"></a>
+                                 </span>
+                              </div>
+                           </div>
+                        </article>
+                     </div>
+					                     
+                  </div>
+               </div>
+            </section>
+             <!-- blog html end -->
+            
+            <!-- Home contact details section html start -->
+            <section class="contact-section">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-4">
+                        <div class="contact-img" style="background-image: url(https://cdn.bookingtour.vn/upload/timetotravel.png?v);">
+                        </div>
+                     </div>
+                     <div class="col-lg-8">
+                        <div class="contact-details-wrap">
+                           <div class="row">
+                              <div class="col-sm-4">
+                                 <div class="contact-details">
+                                    <div class="contact-icon">
+                                       <img src="https://bookingtour.vn/templates/themes/images/icon12.png" alt="">
+                                    </div>
+                                    <ul>
+                                       <li>
+                                          <a href="#">lienhe@flytour.vn</a>
+                                       </li>
+                                       
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="col-sm-4">
+                                 <div class="contact-details">
+                                    <div class="contact-icon">
+                                       <img src="https://bookingtour.vn/templates/themes/images/icon13.png" alt="">
+                                    </div>
+                                    <ul>
+                                       <li>
+                                          <a href="#">09001090</a>
+                                       </li>                                      
+                                    </ul>
+                                 </div>
+                              </div>
+                              <div class="col-sm-4">
+                                 <div class="contact-details">
+                                    <div class="contact-icon">
+                                       <img src="https://bookingtour.vn/templates/themes/images/icon14.png" alt="">
+                                    </div>
+                                    <ul>
+                                       <li>
+                                           1 Trịnh Văn Bô, Nam Từ Liêm, Hà Nội
+                                       </li>
+                                       
+                                    </ul>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="contact-btn-wrap">
+                           <h3>LET'S JOIN US FOR MORE UPDATE !!</h3>
+                           <a href="#" class="button-primary">LEARN MORE</a>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <!--  contact details html end -->
+         </main>         <footer id="colophon" class="site-footer footer-primary">
+            <div class="top-footer">
+               <div class="container">
+                  <div class="row">
+                     <div class="col-lg-3 col-md-6">
+                        <aside class="widget widget_text">
+                           <h3 class="widget-title">
+                              About FlyTour
+                           </h3>
+                           <div class="textwidget widget-text">
+                              Địa chỉ: 1 Trịnh Văn Bô, Nam Từ Liêm, Hà Nội, Việt Nam.
+                           </div>
+                           <div class="award-img">
+                              <a href="#"><img src="https://bookingtour.vn/templates/themes/images/logo6.png" alt=""></a>
+                              <a href="#"><img src="https://bookingtour.vn/templates/themes/images/logo2.png" alt=""></a>
+                           </div>
+                        </aside>
+                     </div>
+                     <div class="col-lg-3 col-md-6">
+                        <aside class="widget widget_text">
+                           <h3 class="widget-title">CONTACT INFORMATION</h3>
+                           <div class="textwidget widget-text">
+                              
+                              <ul>
+                                 <li>
+                                    <a href="#">
+                                       <i class="fas fa-phone-alt"></i>
+                                       0888822368
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <a href="#">
+                                       <i class="fas fa-envelope"></i>
+                                       flytour@gmail.com
+                                    </a>
+                                 </li>
+                                 <li>
+                                    <i class="fas fa-map-marker-alt"></i>
+                                    1 Trịnh Văn Bô, Nam Từ Liêm, Hà Nội
+                                 </li>
+                              </ul>
+                           </div>
+                        </aside>
+                     </div>
+                     <div class="col-lg-3 col-md-6">
+                        <aside class="widget widget_recent_post">
+                           <h3 class="widget-title">Latest Post</h3>
+                           <ul>
+                              <li>
+                                 <h5>
+                                    <a href="#">5 điểm đến mùa thu đẹp như tranh vẽ không thể bỏ qua ở Việt Nam</a>
+                                 </h5>
+                                 <div class="entry-meta">
+                                    <span class="post-on">
+                                       <a href="#">August 17, 2024</a>
+                                    </span>
+                                   
+                                 </div>
+                              </li>
+                              <li>
+                                 <h5>
+                                    <a href="#">7 lễ hội độc đáo mà bạn không nên bỏ lỡ khi đi du lịch Nhật Bản</a>
+                                 </h5>
+                                 <div class="entry-meta">
+                                    <span class="post-on">
+                                       <a href="#">August 19, 2024</a>
+                                    </span>
+                                   
+                                 </div>
+                              </li>
+                           </ul>
+                        </aside>
+                     </div>
+                     <div class="col-lg-3 col-md-6">
+                        <aside class="widget widget_newslatter">
+                           <h3 class="widget-title">SUBSCRIBE US</h3>
+                           <div class="widget-text">
+                             Leave your email so FLYTOUR can send you the TOUR information as soon as possible!
+                           </div>
+                           <form class="newslatter-form">
+                              <input type="email" name="s" placeholder="Your Email..">
+                              <input type="submit" name="s" value="SUBSCRIBE NOW">
+                           </form>
+                        </aside>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="buttom-footer">
+               <div class="container">
+                  <div class="row align-items-center">
+                     <div class="col-md-5">
+                        <div class="footer-menu">
+                           <ul>
+                              <li>
+                                 <a href="#">TERMS & CONDITIONS</a>
+                              </li>
+                              <li>
+                                 <a href="#">Privacy Policy</a>
+                              </li>
+                              <li>
+                                 <a href="#">About FlyTour</a>
+                              </li>
+                           </ul>
+                        </div>
+                     </div>
+                     <div class="col-md-2 text-center">
+                        <div class="footer-logo">
+                           <a href="#"><%= image_tag("ap.png", size: '40') %></a>
+                        </div>
+                     </div>
+                     <div class="col-md-5">
+                        <div class="copy-right text-right">Copyright © 2024 FlyTour. All rights Flytour.vn</div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </footer>         <a id="backTotop" href="#" class="to-top-icon">
+            <i class="fas fa-chevron-up"></i>
+         </a>
+         <!-- custom search field html -->
+            <div class="header-search-form">
+               <div class="container">
+                  <div class="header-search-container">
+                     <form class="search-form" role="search" method="get" >
+                        <input type="text" name="s" placeholder="Enter your text...">
+                     </form>
+                     <a href="#" class="search-close">
+                        <i class="fas fa-times"></i>
+                     </a>
+                  </div>
+               </div>
+            </div>
+         <!-- header html end -->
+      </div>
 
-  <div class="mt-6">
-    <a href="https://www.buymeacoffee.com/webcrunch" target="_blank"><img src="https://img.buymeacoffee.com/button-api/?text=Buy me a coffee&amp;emoji=&amp;slug=webcrunch&amp;button_colour=f0f0f0&amp;font_colour=333333&amp;font_family=Cookie&amp;outline_colour=333333&amp;coffee_colour=555555"></a>
-  </div>
-</div>
-<div class="lg:col-span-3">
-  <h3 class="font-semibold text-gray-700">Useful links</h3>
-  <ul class="list-disc leading-loose pl-4 mb-2 text-sm">
-    <li>
-      <%= link_to "View this on Github", "https://github.com/justalever/kickoff_tailwind", class: "underline text-indigo-600 hover:text-indigo-700" %>
-    </li>
-    <li>
-      <%= link_to "Rails Guides", "https://guides.rubyonrails.org/", class: "underline text-indigo-600 hover:text-indigo-700" %>
-    </li>
-    <li>
-      <%= link_to "Rails API Documentation", "https://api.rubyonrails.org/", class: "underline text-indigo-600 hover:text-indigo-700" %>
-    </li>
-    <li>
-      <%= link_to "Rails Forum", "https://discuss.rubyonrails.org/", class: "underline text-indigo-600 hover:text-indigo-700" %>
-    </li>
-    <li>
-      <%= link_to "Devise Docs", "https://github.com/heartcombo/devise", class: "underline text-indigo-600 hover:text-indigo-700" %>
-    </li>
-    <li>
-      <%= link_to "Friendly ID Docs", "https://github.com/norman/friendly_id", class: "underline text-indigo-600 hover:text-indigo-700" %>
-    </li>
-    <li>
-      <%= link_to "Tailwind CSS Docs", "https://tailwindcss.com/docs/installation", class: "underline text-indigo-600 hover:text-indigo-700" %>
-    </li>
-  </ul>
-</div>
-<div class="lg:col-span-3">
-  <h3 class="font-semibold text-gray-700">Shameless plugs</h3>
-  <ul class="list-disc leading-loose pl-4 mb-2 text-sm">
-
-    <li><%= link_to "web-crunch.com", "https://web-crunch.com", target: :_blank, class: "underline text-indigo-600 hover:text-indigo-700" %></li>
-    <li><%= link_to "hellorails.io", "https://hellorails.io", target: :_blank, class: "underline text-indigo-600 hover:text-indigo-700" %></li>
-    <li><%= link_to "YouTube", "https://youtube.com/c/webcrunch", target: :_blank, class: "underline text-indigo-600 hover:text-indigo-700" %></li>
-    <li>
-      <%= link_to "Sponsor me", "https://github.com/sponsors/justalever", target: :_blank, class: "underline text-indigo-600 hover:text-indigo-700" %>
-    </li>
-  </ul>
-</div>
-</div>
-
-<div class="lg:block hidden">
-  <svg class="fixed bottom-0 left-0 right-0 z-10" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#5000ca" fill-opacity="1" d="M0,288L60,282.7C120,277,240,267,360,224C480,181,600,107,720,96C840,85,960,139,1080,154.7C1200,171,1320,149,1380,138.7L1440,128L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path></svg>
-
-  <svg class="fixed bottom-5 left-0 right-0 z-0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="#f3f4f5" fill-opacity="1" d="M0,96L48,128C96,160,192,224,288,240C384,256,480,224,576,176C672,128,768,64,864,53.3C960,43,1056,85,1152,90.7C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>
-</div>
-
-<div class="w-full lg:absolute bottom-3 lg:right-3 pl-4 pb-3 lg:p-0 flex lg:justify-center justify-start z-50">
-  <div class="w-full flex-1 flex lg:justify-center justify-start items-center">
-    <img src="https://secure.gravatar.com/avatar/d1f5ca0d7e625f334c5186e112b77ebd?s=400" class="rounded-full w-8 h-8 border-2 border-opacity-30 border-gray-300 mr-2" />
-    <p class="lg:text-white text-gray-600 text-sm">Made by <a href="https://twitter.com/justalever" target="_blank" class="underline opacity-75 hover:opacity-100">@justalever</a></p>
-  </div>
-</div>
+      <!-- JavaScript -->
+      <script src="https://bookingtour.vn/templates/themes/js/jquery.js"></script>
+      <script src="https://bookingtour.vn/templates/themes/vendors/bootstrap/js/bootstrap.min.js"></script>
+      <script src="https://bookingtour.vn/templates/themes/vendors/jquery-ui/jquery-ui.min.js"></script>
+      <script src="https://bookingtour.vn/templates/themes/vendors/countdown-date-loop-counter/loopcounter.js"></script>
+      <script src="https://bookingtour.vn/templates/themes/js/jquery.counterup.js"></script>
+      <script src="https://bookingtour.vn/templates/themes/vendors/modal-video/jquery-modal-video.min.js"></script>
+      <script src="https://bookingtour.vn/templates/themes/vendors/masonry/masonry.pkgd.min.js"></script>
+      <script src="https://bookingtour.vn/templates/themes/vendors/lightbox/dist/js/lightbox.min.js"></script>
+      <script src="https://bookingtour.vn/templates/themes/vendors/slick/slick.min.js"></script>
+      <script src="https://bookingtour.vn/templates/themes/js/jquery.slicknav.js"></script>
+      <script src="https://bookingtour.vn/templates/themes/js/custom.min.js"></script>
+	  <script src="https://cdnjs.cloudflare.com/ajax/libs/lazysizes/5.2.0/lazysizes.min.js" async=""></script>
+	     
+	  
+   </body>
+</html>

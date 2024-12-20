@@ -4,6 +4,7 @@ class BookingsController < ApplicationController
   # GET /bookings or /bookings.json
   def index
     @bookings = Booking.all
+    @bookings_by_tour = Booking.group(:tour).count
   end
 
   # GET /bookings/1 or /bookings/1.json
@@ -13,12 +14,14 @@ class BookingsController < ApplicationController
   # GET /bookings/new
   def new
     @booking = Booking.new
+    @tours = Tour.all
+    @tour_packages = TourPackage.none # Initialize as an empty collection
   end
 
   # GET /bookings/1/edit
   def edit
   end
-
+      
   # POST /bookings or /bookings.json
   def create
     @booking = Booking.new(booking_params)
@@ -66,5 +69,13 @@ class BookingsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def booking_params
       params.require(:booking).permit(:date, :number_of_people, :total_amount, :tour_id, :user_id)
+    end
+    
+    def get_tour_packages 
+      tour = Tour.find(params[:tour_id]) 
+      @tour_packages = tour ? tour.tour_packages : TourPackage.none 
+      respond_to do |format|
+        format.js 
+      end 
     end
 end

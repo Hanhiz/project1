@@ -12,38 +12,38 @@
     </div>
   </div>
 
-  <ul class="text-slate-700">
-      <li>
-        <p class="font-semibold">Name:</p>
-        <p><%= @tour.name %></p>
-      </li>
-      <li>
-        <p class="font-semibold">Destination:</p>
-        <p><%= @tour.destination %></p>
-      </li>
-      <li>
-        <p class="font-semibold">Start date:</p>
-        <p><%= @tour.start_date %></p>
-      </li>
-      <li>
-        <p class="font-semibold">End date:</p>
-        <p><%= @tour.end_date %></p>
-      </li>
-      <li>
-        <p class="font-semibold">Minimum price:</p>
-        <p><%= @tour.minimum_price %></p>
-      </li>
-      <li>
-        <p class="font-semibold">Max capcity:</p>
-        <p><%= @tour.max_capcity %></p>
-      </li>
-      <li>
-        <p> 
-          <strong>Image:</strong> 
-          <% if @tour.image.attached? %> 
-            <%= image_tag @tour.image if @tour.image.attached? %>
-          <% end %> 
-        </p>
-      </li>
+  <ul class="text-slate-700 mt-2">
+    <li>
+      <p> 
+        <% if @tour.image.attached? %> 
+          <%= image_tag @tour.image if @tour.image.attached? %>
+        <% end %> 
+      </p>
+    </li>
+    <li>
+      <p class="font-semibold">Name:</p>
+      <p><%= @tour.name %></p>
+    </li>
+    <li>
+      <p class="font-semibold">Destination:</p>
+      <p><%= @tour.destination %></p>
+    </li>
+    <li>
+      <p class="font-semibold">Start date:</p>
+      <p><%= @tour.start_date %></p>
+    </li>
+    <li>
+      <p class="font-semibold">End date:</p>
+      <p><%= @tour.end_date %></p>
+    </li>
+    <li>
+      <p class="font-semibold">Minimum price:</p>
+      <p><%= @tour.minimum_price %></p>
+    </li>
+    <li>
+      <p class="font-semibold">Max capcity:</p>
+      <p><%= @tour.max_capcity %></p>
+    </li>
   </ul>
 </div>
+

@@ -7,6 +7,10 @@ class Tour < ApplicationRecord
     
     has_one_attached :image
 
+    scope :by_destination, ->(destination) { where('destination LIKE ?', "%#{destination}%") }
+    scope :by_price_range, ->(min_price, max_price) { where(minimum_price: min_price..max_price) }
+    scope :by_date_range, ->(start_date, end_date) { where(start_date: start_date..end_date) }
+    
     validates_presence_of :name, :destination, :start_date, :end_date, :minimum_price, :max_capcity
     validates_uniqueness_of :name
     validates_numericality_of :minimum_price, greater_than_or_equal_to: 0

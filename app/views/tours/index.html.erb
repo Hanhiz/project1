@@ -1,52 +1,61 @@
-
-
-
 <div class="container mx-auto px-4">
-  <div class="flex items-center justify-between flex-wrap mb-6">
-    <h1 class="text-3xl font-bold">Tours</h1>
+  <div class="container mx-auto px-4">
+    <div class="flex items-center justify-between flex-wrap mb-6">
+      <h1 class="text-3xl font-bold">Tours</h1>
+      <div class="flex items-center">
+        <i id="toggle-icon" class="fa fa-filter cursor-pointer text-2xl mr-2" aria-hidden="true"></i>
+        <%= link_to new_tour_path, class: button_class(theme: "primary") do %>
+          Add New Tour
+        <% end %>
+      </div>
+    </div>
 
-    <%= form_tag(tours_path, method: :get) do %>
-      <%= text_field_tag :term %>
-      <%= submit_tag 'Search' %>
-    <% end %>
-    
-    <%= link_to new_tour_path, class: button_class(theme: "primary") do %>
-    Add New Tour
-    <% end %>
+    <div id="tour-table" class="hidden flex justify-center mb-6">
+      <%= form_tag(tours_path, method: :get) do %>
+        <div class="flex space-x-4">
+          <%= text_field_tag :term, params[:term], placeholder: "Search by Name", class: "input-class" %>
+          <%= text_field_tag :destination, params[:destination], placeholder: "Destination", class: "input-class" %>
+          <%= number_field_tag :min_price, params[:min_price], placeholder: "Min Price", class: "input-class" %>
+          <%= number_field_tag :max_price, params[:max_price], placeholder: "Max Price", class: "input-class" %>
+          <%= date_field_tag :start_date, params[:start_date], placeholder: "Start Date", class: "input-class" %>
+          <%= date_field_tag :end_date, params[:end_date], placeholder: "End Date", class: "input-class" %>
+          <%= submit_tag 'Filter', class: "button-class" %>
+        </div>
+      <% end %>
+    </div>
   </div>
 
   <table class="table-auto border-collapse border-slate-400 w-full">
     <thead class="bg-slate-50 dark:bg-slate-700">
       <tr>
-        
-          <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Name</th>
-        
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Destination</th>
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Start date</th>
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">End date</th>
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Minimum price</th>
-                  <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Max capcity</th>
-                
+        <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Name</th>
+        <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Destination</th>
+        <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Start Date</th>
+        <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">End Date</th>
+        <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Minimum Price</th>
+        <th class="border border-slate-300 dark:border-slate-600 font-semibold p-4 text-slate-900 dark:text-slate-200 text-left">Max Capacity</th>
       </tr>
     </thead>
 
     <tbody>
       <% @tours.each do |tour| %>
-      <%= content_tag :tr, id: dom_id(tour), class: dom_class(tour) do %>
-      
-        <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= link_to tour.name, tour %></td>
-      
-
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= tour.destination %></td>
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= tour.start_date %></td>
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= tour.end_date %></td>
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= tour.minimum_price %></td>
-              <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= tour.max_capcity %></td>
-      
-      
-      <% end %>
+        <%= content_tag :tr, id: dom_id(tour), class: dom_class(tour) do %>
+          <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= link_to tour.name, tour, class: "text-blue-500 hover:underline" %></td>
+          <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= tour.destination %></td>
+          <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= tour.start_date %></td>
+          <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= tour.end_date %></td>
+          <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= tour.minimum_price %></td>
+          <td class="border border-slate-300 dark:border-slate-700 p-4 text-slate-500 dark:text-slate-400"><%= tour.max_capcity %></td>
+        <% end %>
       <% end %>
     </tbody>
   </table>
 </div>
+<div class="container mx-auto px-4">
+  <div class="flex items-center justify-between flex-wrap mb-6">
+    <h1 class="text-3xl font-bold">Tours by Destination</h1>
+  </div>
+
+  <%= pie_chart @tours_by_destination, height: "400px", library: { title: { text: "Tours by Destination", x: -20 } } %>
+
 </div>
